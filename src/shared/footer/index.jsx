@@ -3,7 +3,14 @@ import './style.scss';
 
 const Footer = () => {
   return (
-    <div>index</div>
+    <div className='footer'>
+      <ul>
+        <li>corefares @ 2023</li>
+        <li>About Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+      </ul>
+    </div>
   )
 }
 

@@ -1,15 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
+
+import "./App.scss";
 import HomeComponent from "./view/home";
 import React from "react";
 import Footer from "./shared/footer";
+import background from "../src/assets/background.jpg"
 
 
 function App() {
   return (
     <React.Fragment>
-      <HomeComponent />
-      <Footer />
+      <div className="App" style={{ backgroundImage: `url(${background})` }}>
+        <HomeComponent />
+        <Footer />
+      </div>
     </React.Fragment>
   );
 }
