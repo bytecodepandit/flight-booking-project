@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Carousel, Indicator } from 'react-bootstrap';
 import plane from "../../assets/plane.png"
 import './style.scss';
@@ -32,19 +32,23 @@ const Testimonials = () => {
     };
 
     return (
-        <Carousel controls={false} className='testimonials' activeIndex={index} direction={direction} onSelect={handleSelect} interval={3000}>
+        <React.Fragment>
+            <img className='plane' src={plane} />
+
+            <Carousel controls={false} className='testimonials' activeIndex={index} direction={direction} onSelect={handleSelect} interval={3000}>
 
 
-            {testimonials.map((testimonial, i) => (
-                <Carousel.Item key={i}>
-                    <img className='plane' src={plane} />
-                    <h1 className='quote'>{testimonial.quote}</h1>
-                    <p className='name'>{testimonial.name}</p>
-                    <p className='status'>{testimonial.status}</p>
+                {testimonials.map((testimonial, i) => (
+                    <Carousel.Item key={i}>
 
-                </Carousel.Item>
-            ))}
-        </Carousel>
+                        <h1 className='quote'>{testimonial.quote}</h1>
+                        <p className='name'>{testimonial.name}</p>
+                        <p className='status'>{testimonial.status}</p>
+
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </React.Fragment>
     );
 }
 

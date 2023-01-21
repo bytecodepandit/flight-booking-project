@@ -6,12 +6,12 @@ import './style.scss';
 
 const HomeComponent = () => {
   return (
-    <div className="container-fluid">
-      <div className="col-6">
+    <div className="container-fluid home">
+      <div className=" Testimonials " >
         <Testimonials />
       </div>
-      <div className="col-6">
-        {/* <RegistrationForm /> */}
+      <div className="">
+        <RegistrationForm />
       </div>
     </div>
   );
