@@ -5,11 +5,10 @@
   justify-content: center;
   align-items: center;
   padding: 68px 65px 31px 65px;
-  margin-top: 60px;
-  margin-right: 83px;
   background: #ffffff;
   box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
+  margin: auto;
 
   .heading {
     font-size: 24px;
@@ -30,6 +29,7 @@
   .registration-form {
     width: 100%;
     .form-floating {
+      width: 100%;
       > .form-control-plaintext ~ label,
       > .form-control:focus ~ label,
       > .form-control:not(:placeholder-shown) ~ label,
@@ -100,72 +100,5 @@
       text-decoration: underline;
       color: #25a0da;
     }
-  }
-  .input-box {
-    // width: 100%;
-    // padding: 15px 17px;
-    // background: #FAFAFA;
-    // border: 1px solid #D8D8D8;
-    // border-radius: 8px;
-    // margin-top: 24px;
-  }
-
-  .sign-in {
-    width: 100%;
-    margin-top: 65px;
-    background-color: #25a0da;
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-  .psw-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    margin-top: 24px;
-
-    .input-box-password {
-      width: 100%;
-      padding: 15px 17px;
-      background: #fafafa;
-      border: 1px solid #d8d8d8;
-      border-radius: 8px;
-    }
-
-    .eye-icon {
-      position: absolute;
-      margin-right: 14px;
-      width: 15px;
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .registration-form {
-    width: 360px;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 38px 35px 20px 35px;
-    margin-top: 55px;
-    margin-right: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .registration-form {
-    width: 360px;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 28px 25px 20px 25px;
-    margin-top: 25px;
-    margin-right: 0;
   }
 }

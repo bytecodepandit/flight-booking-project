@@ -1,25 +1,8 @@
-.home{
-    display: flex;
-    justify-content: space-between
+.home-page-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  @media (min-width: 768px) {
+    padding: 75px 83px 0px;
+  }
 }
-
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-    .home {
-        width: 700px;
-    }
-    
-  }
-  @media  (max-width: 768px) {
-  
-    .home {
-
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        
-    }
-    
-  }

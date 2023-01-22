@@ -9,7 +9,7 @@ import background from "../src/assets/background.jpg"
 function App() {
   return (
     <React.Fragment>
-      <div className="App" style={{ backgroundImage: `url(${background})`, backgroundAttachment: 'fixed' }}>
+      <div className="App" style={{ backgroundImage: `url(${background})`, backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
         <HomeComponent />
         <Footer />
       </div>
