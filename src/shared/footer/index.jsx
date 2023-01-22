@@ -6,9 +6,9 @@ const Footer = () => {
     <div className='footer'>
       <ul>
         <li>corefares @ 2023</li>
-        <li>About Us</li>
-        <li>Privacy Policy</li>
-        <li>Terms & Conditions</li>
+        <li><a href='#'>About Us</a></li>
+        <li><a href='#'>Privacy Policy</a></li>
+        <li><a href='#'>Terms & Conditions</a></li>
       </ul>
     </div>
   )
