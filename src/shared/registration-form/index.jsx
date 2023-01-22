@@ -25,13 +25,14 @@ const RegistrationForm = () => {
         <FloatingLabel
           controlId="floatingInput"
           label="Customer ID"
-          className="mb-3"
+          className='mb-3'
+
         >
-          <Form.Control type="text" placeholder="Customer ID" {...register("customerId", {required: true})}/>
+          <Form.Control className={`${errors?.customerId ? 'has-error': null}`} type="text" placeholder="Customer ID" {...register("customerId", {required: true})}/>
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput" label="Email" className="mb-3">
-          <Form.Control type="email" placeholder="Email" {...register("emailId", {required: true})}/>
+          <Form.Control className={`${errors?.emailID ? 'has-error': null}`} type="email" placeholder="Email" {...register("emailID", {pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/, required: true})}/>
         </FloatingLabel>
 
         <FloatingLabel
@@ -41,6 +42,7 @@ const RegistrationForm = () => {
         >
           <Form.Control
             type={showPassword ? "text" : "password"}
+            className={`${errors?.password ? 'has-error': null}`}
             placeholder="Password"
             {...register("password", {required: true})}
           />
