@@ -14,6 +14,7 @@ const RegistrationForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+  console.log(errors)
   return (
     <div className="registration-form-container">
       <h2 className="heading">Hello, Again!</h2>
@@ -25,14 +26,36 @@ const RegistrationForm = () => {
         <FloatingLabel
           controlId="floatingInput"
           label="Customer ID"
-          className='mb-3'
-
+          className="mb-3"
         >
-          <Form.Control className={`${errors?.customerId ? 'has-error': null}`} type="text" placeholder="Customer ID" {...register("customerId", {required: true})}/>
+          <Form.Control
+            className={`${errors?.customerId ? "has-error" : null}`}
+            type="text"
+            placeholder="Customer ID"
+            {...register("customerId", { required: true })}
+          />
+          {errors?.customerId && (
+            <Form.Text className="text-danger">
+              CustomerId is required
+            </Form.Text>
+          )}
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingInput" label="Email" className="mb-3">
-          <Form.Control className={`${errors?.emailID ? 'has-error': null}`} type="email" placeholder="Email" {...register("emailID", {pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/, required: true})}/>
+          <Form.Control
+            className={`${errors?.emailID ? "has-error" : null}`}
+            type="email"
+            placeholder="Email"
+            {...register("emailID", {
+              pattern: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/,
+              required: true,
+            })}
+          />
+          {errors?.emailID && (
+            <Form.Text className="text-danger">
+              {errors.emailID.type === 'pattern' ? 'Enter Valid email' : 'Email is required'}
+            </Form.Text>
+          )}
         </FloatingLabel>
 
         <FloatingLabel
@@ -42,9 +65,9 @@ const RegistrationForm = () => {
         >
           <Form.Control
             type={showPassword ? "text" : "password"}
-            className={`${errors?.password ? 'has-error': null}`}
+            className={`${errors?.password ? "has-error" : null}`}
             placeholder="Password"
-            {...register("password", {required: true})}
+            {...register("password", { required: true })}
           />
           <span
             className="eye-icon"
@@ -56,6 +79,11 @@ const RegistrationForm = () => {
               <BsFillEyeSlashFill color="#666666" />
             )}
           </span>
+          {errors?.password && (
+            <Form.Text className="text-danger">
+              Password is required
+            </Form.Text>
+          )}
         </FloatingLabel>
         <a className="forget-password">Forget Password?</a>
         <Button

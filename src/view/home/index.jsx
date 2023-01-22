@@ -10,10 +10,10 @@ const HomeComponent = () => {
   return (
     <Container fluid className="home-page-container">
       <Row style={{width: '100%'}}>
-        <Col sm="6" lg="7">
+        <Col lg="6" xl="7">
           <Testimonials />
         </Col>
-        <Col sm="12"  lg="5">
+        <Col lg="6" xl="5">
           <RegistrationForm />
         </Col>
       </Row>

@@ -1,7 +1,6 @@
 .testimonials {
-  width: 680px;
+  max-width: 680px;
   padding-top: 100px;
-  padding-left: 126px;
   padding-bottom: 10px;
   display: none;
 
@@ -19,8 +18,8 @@
 
 .plane {
   padding-top: 155px;
-  padding-left: 126px;
   display: none;
+  max-width: 80%;
 
   @media (min-width: 992px) {
     display: block;
